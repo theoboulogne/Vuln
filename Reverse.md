@@ -12,7 +12,7 @@ echo 0 | sudo tee /proc/sys/kernel/randomize_va_space
 
 ## Static
 
-> Méthodologie
+### Méthodologie
 
 - Ouvrir le code avec Ghidra
 - Rechercher les strings pour avoir des infos (dans Ghidra ou avec la commande suivante)
@@ -24,7 +24,7 @@ strings FILE
 
 ## Dynamic
 
-> Commandes GDB
+### Commandes GDB
 
 - Déassemble la fonction
 ```powershell
@@ -67,12 +67,12 @@ x/xw <register or address>
 x/200w $esp
 ```
 
-> Récupération d'informations auxilliaire
+### Récupération d'informations auxilliaire
 
 - Utiliser strace / ltrace puis regarder les informations données
 - Utiliser wireshark en arrière plan pour récupérer le traffic
 
-> Méthodologie pour un stack overflow
+### Méthodologie pour un stack overflow
 
 - Trouver un point d'injection vulnérable
 - Y mettre une longue chaine de caractère générée avec PwnTools
