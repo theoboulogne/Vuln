@@ -1,6 +1,10 @@
 # Reverse
 
-Toujours changer la config du ASLR :
+## [Retour à l'index](https://github.com/theoboulogne/Vuln)
+
+-----
+
+**Toujours changer la config du ASLR :**
 ```powershell
 echo 0 | sudo tee /proc/sys/kernel/randomize_va_space 
 ```
@@ -37,43 +41,43 @@ strings FILE
 ### Commandes GDB
 
 - Déassemble la fonction
-```powershell
+```gdb
 disas <function name>
 ```
 - Ajoute un breakpoint à une adresse donnée
-```powershell
+```gdb
 b * <breakpoint address>
 ```
 - Va à la prochaine instruction (EIP+1)
-```powershell
+```gdb
 ni
 ```
 - Continue l'exécution jusqu'au prochain breakpoint
-```powershell
+```gdb
 c
 ```
 - Lance ou relance le programme
-```powershell
+```gdb
 r
 ```
 - Inspecte le registre
-```powershell
+```gdb
 i r
 ```
 - Affiche des infos sur une fonction (start ici)
-```powershell
+```gdb
 info functions start
 ```
 - Récupère l'adresse d'un JMP ESP
-```powershell
+```gdb
 jmp esp
 ```
 - Affiche le contenu d'une adresse
-```powershell
+```gdb
 x/xw <register or address>
 ```
 - Affiche le contenu du ESP
-```powershell
+```gdb
 x/200w $esp
 ```
 
@@ -99,7 +103,7 @@ pwn cyclic –l ADDRESSE
 ```
 - Mettre une chaine de la taille donnée suivi de l'adresse que l'on veut exécuter
 - On peut aussi récupérer notre shellcode, pour ça on met une adresse contenant un JMP ESP
-```powershell
+```gdb
 jmp esp
 ```
 - On rajoute ensuite des NOP
