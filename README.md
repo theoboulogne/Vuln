@@ -1,7 +1,7 @@
 # Vulnérabilité
 
-> [Web](https://qzdqzd)
+> [Web](https://github.com/theoboulogne/Vuln/blob/main/Web.md)
 
-> [Reverse](https://qzdqzd)
+> [Reverse](https://github.com/theoboulogne/Vuln/blob/main/Reverse.md)
  
-> [Android](https://qzdqzd)
+> [Android](https://github.com/theoboulogne/Vuln/blob/main/Android.md)
