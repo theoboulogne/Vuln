@@ -21,9 +21,9 @@
 - [CSRF Exploit](#CSRF)
 - [File Inclusion](#File-Inclusion)
 - [File Upload](#File-Upload)
-- [Insecure source code management](#Insecure source code management)
+- [Insecure source code management](#Insecure-source-code-management)
 - [JSON WEB TOKEN](#JWT)
-- [Template Injection](#Template Injection)
+- [Template Injection](#Template-Injection)
 
 
 
