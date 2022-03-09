@@ -2,10 +2,14 @@
 
 ## [Retour à l'index](https://github.com/theoboulogne/Vuln)
 
+-----
+
 ## Index
 
 - [Static](#Static)
 - [Dynamic](#Dynamic)
+
+-----
 
 ### Connexion en root sur le téléphone
 
@@ -24,9 +28,11 @@ bluestack.conf -> ctrl+f root -> les passer à 1
 192.168.56.1
 ```
 
-
+-----
 
 ## Static
+
+-----
 
 ### Méthodologie pour JADX
 
@@ -35,6 +41,8 @@ bluestack.conf -> ctrl+f root -> les passer à 1
 jadx-gui
 ```
 - Puis, Fichier -> Ouvrir l'APK
+
+-----
 
 ### Méthodologie pour un backup
 ```powershell
@@ -52,14 +60,18 @@ adb backup -apk -shared -all -f backup.ab
 ```
 - Il ne reste plus qu'à trouver des données intéressantes
 
-
+-----
 
 ## Dynamic
+
+-----
 
 ### Méthodologie pour une Injection SQL
 
 - On peut identifier des champs injectables avec jadx
 - Utiliser tout les champs qui semblent injectables (reprendre la [méthodologie Web](https://github.com/theoboulogne/Vuln/blob/main/Web.md#SQL-Injection))
+
+-----
 
 ### Méthodologie pour récupérer des informations auxilliaire
 
@@ -67,6 +79,8 @@ adb backup -apk -shared -all -f backup.ab
 ```powershell
 adb logcat
 ```
+
+-----
 
 ### Méthodologie pour lancer une activité exportée
 
