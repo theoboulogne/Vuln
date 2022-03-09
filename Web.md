@@ -29,13 +29,13 @@
 
 ## SQL Injection
 
-> Liens
+### Liens
 
 [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection)
 
 [Portswigger Cheat Sheet](https://portswigger.net/web-security/sql-injection/cheat-sheet)
 
-> Méthodologie pour un champ de connexion
+### Méthodologie pour un champ de connexion
 
 - Vérifier qu'une injection SQL est possible
 - Bypass la connexion avec un payload du type :
@@ -47,7 +47,7 @@
 username' --
 ```
 
-> Méthodologie pour une requête affichée sur la page
+### Méthodologie pour une requête affichée sur la page
 
 - Vérifier qu'une injection SQL est possible
 - Récupérer le nombre de colonnes retournées par la requête
@@ -64,7 +64,7 @@ qzdqzdq' union select 'qdz',NULL,NULL--
 qzdqzdq' union select username,password,NULL from users--
 ```
 
-> Méthodologie pour une requête qui n'est pas affichée
+### Méthodologie pour une requête qui n'est pas affichée
 
 - Faire une timebased SQL avec la cheetsheet portswigger ou la correction des labs :
 [Time based Lab](https://portswigger.net/web-security/sql-injection/blind/lab-time-delays)
@@ -77,13 +77,13 @@ qzdqzdq' union select username,password,NULL from users--
 
 ## XSS
 
-> Liens
+### Liens
 
 [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection)
 
 [Portswigger Cheat Sheet](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet)
 
-> Méthodologie pour un contenu affiché (Si il n'est pas afficher partir de l'étape 4)
+### Méthodologie pour un contenu affiché (Si il n'est pas afficher partir de l'étape 4)
 
 - Vérifier que du XSS est possible
 ```powershell
@@ -126,11 +126,11 @@ localStorage.getItem('access_token')
 
 ## XXE
 
-> Liens
+### Liens
 
 [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XXE%20Injection)
 
-> Méthodologie pour afficher un fichier ou lire un lien
+### Méthodologie pour afficher un fichier ou lire un lien
 
 - Rajouter au début
 ```powershell
@@ -145,13 +145,13 @@ localStorage.getItem('access_token')
 
 ## CSRF
 
-> Liens
+### Liens
 
 [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/CSRF%20Injection)
 
 [Générateur](https://security.love/CSRF-PoC-Genorator/)
 
-> Méthodologie
+### Méthodologie
 
 - En fonction de la requête à exploiter utiliser le payload qui correspond
 ```powershell
@@ -170,11 +170,11 @@ localStorage.getItem('access_token')
 
 ## File Inclusion
 
-> Liens
+### Liens
 
 [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion)
 
-> Méthodologie
+### Méthodologie
 
 - Utiliser des retour en arrière pour accéder à des fichiers (cf: [Directory Traversal](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Directory%20Traversal))
 ```powershell
@@ -198,11 +198,11 @@ php://filter/convert.base64-encode/resource=index.php
 
 ## File Upload
 
-> Liens
+### Liens
 
 [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Upload%20Insecure%20Files)
 
-> Méthodologie
+### Méthodologie
 
 - Upload un fichier autorisé
 - Récupérer le chemin d'accès au fichier
@@ -235,11 +235,11 @@ Content-Type : image/jpeg
 
 ## Insecure source code management
 
-> Liens
+### Liens
 
 [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Insecure%20Source%20Code%20Management)
 
-> Méthodologie
+### Méthodologie
 
 - Regarder si les fichiers suivants sont accessibles :
 ```powershell
@@ -253,11 +253,11 @@ Content-Type : image/jpeg
 
 ## JWT
 
-> Liens
+### Liens
 
 [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/JSON%20Web%20Token)
 
-> Méthodologie
+### Méthodologie
 
 - Analyser le token avec [jwt.io](https://jwt.io/)
 - Essayer de changer le contenu sans modifier la signature
@@ -268,11 +268,11 @@ Content-Type : image/jpeg
 
 ## Template Injection
 
-> Liens
+### Liens
 
 [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection)
 
-> Méthodologie
+### Méthodologie
 
 - Identifier le moteur en faisant exécuter une erreur
 ```powershell
