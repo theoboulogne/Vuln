@@ -5,12 +5,19 @@ Toujours changer la config du ASLR :
 echo 0 | sudo tee /proc/sys/kernel/randomize_va_space 
 ```
 
+-----
+
 ## Index
 
 - [Static Reverse](#Static)
 - [Dynamic Reverse](#Dynamic)
 
+-----
+-----
+
 ## Static
+
+-----
 
 ### Méthodologie
 
@@ -22,7 +29,12 @@ strings FILE
 - Comprendre et renommer les fonctions / variables
 - En cas de problème utiliser un [compilateur C en ligne](https://godbolt.org/)
 
+-----
+-----
+
 ## Dynamic
+
+-----
 
 ### Commandes GDB
 
@@ -67,10 +79,14 @@ x/xw <register or address>
 x/200w $esp
 ```
 
+-----
+
 ### Récupération d'informations auxilliaire
 
 - Utiliser strace / ltrace puis regarder les informations données
 - Utiliser wireshark en arrière plan pour récupérer le traffic
+
+-----
 
 ### Méthodologie pour un stack overflow
 
