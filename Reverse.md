@@ -13,7 +13,6 @@ echo 0 | sudo tee /proc/sys/kernel/randomize_va_space
 - [Dynamic Reverse](#Dynamic)
 
 -----
------
 
 ## Static
 
@@ -29,7 +28,6 @@ strings FILE
 - Comprendre et renommer les fonctions / variables
 - En cas de problème utiliser un [compilateur C en ligne](https://godbolt.org/)
 
------
 -----
 
 ## Dynamic
