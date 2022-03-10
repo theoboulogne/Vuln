@@ -27,6 +27,18 @@
 
 -----
 
+## Recherche de faille
+
+### Liens
+
+[Open Redirect](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Open%20Redirect)
+
+### Commandes
+
+- nikto
+- dirb
+
+
 ## SQL Injection
 
 ### Liens
@@ -37,7 +49,7 @@
 
 ### Méthodologie pour un champ de connexion
 
-- Vérifier qu'une injection SQL est possible
+- Vérifier qu'une injection SQL est possible [cf](https://www.root-me.org/fr/Challenges/Web-Serveur/SQL-injection-authentification-GBK?action_solution=voir&debut_affiche_solutions=1#pagination_affiche_solutions) + [cf](https://www.root-me.org/fr/Challenges/Web-Serveur/SQL-injection-String?action_solution=voir#ancre_solution)
 - Bypass la connexion avec un payload du type :
 ```sql
 ' or 1=1--
@@ -49,7 +61,7 @@ username' --
 
 ### Méthodologie pour une requête affichée sur la page
 
-- Vérifier qu'une injection SQL est possible
+- Vérifier qu'une injection SQL est possible[cf](https://www.root-me.org/fr/Challenges/Web-Serveur/SQL-injection-authentification-GBK?action_solution=voir&debut_affiche_solutions=1#pagination_affiche_solutions) + [cf](https://www.root-me.org/fr/Challenges/Web-Serveur/SQL-injection-String?action_solution=voir#ancre_solution)
 - Récupérer le nombre de colonnes retournées par la requête
 ```sql
 ' order by X--
@@ -173,10 +185,11 @@ localStorage.getItem('access_token')
 ### Liens
 
 [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion)
+[HackTricks](https://book.hacktricks.xyz/pentesting-web/file-inclusion)
 
 ### Méthodologie
 
-- Utiliser des retour en arrière pour accéder à des fichiers (cf: [Directory Traversal](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Directory%20Traversal))
+- Utiliser des retour en arrière pour accéder à des fichiers (cf: [Directory Traversal](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Directory%20Traversal) + [Path Truncation](https://www.root-me.org/fr/Challenges/Web-Serveur/PHP-Path-Truncation?action_solution=voir#ancre_solution))
 ```powershell
 ../../../../../../../etc/passwd
 ```
