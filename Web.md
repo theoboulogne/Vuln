@@ -7,7 +7,7 @@
 
 [Root-Me labs - Web Serveur](https://www.root-me.org/fr/Challenges/Web-Serveur/)
 
-[Root-Me labs - Web Client](https://www.root-me.org/fr/Challenges/Web-Client/)
+[Root-Me labs - Web Client](https://www.root-me.org/fr/Challenges/Web-Clientjwt/)
 
 [CyberChef](https://gchq.github.io/CyberChef/)
 
@@ -269,6 +269,7 @@ Content-Type : image/jpeg
 ### Liens
 
 [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/JSON%20Web%20Token)
+[Root-Me Tutorial](https://repository.root-me.org/Exploitation%20-%20Web/EN%20-%20Attacking%20JWT%20authentication%20-%20Sjoerd%20Langkemper.pdf?_gl=1*xx748k*_ga*MTg3OTI2ODYyOC4xNjQyNzc5MzE4*_ga_SRYSKX09J7*MTY1MDgxMjIzMi41MC4xLjE2NTA4MTIzMDAuMA..)
 
 ### Méthodologie
 
